@@ -47,7 +47,7 @@ export default class CreateRoomJoinPage extends Component{
                 guest_can_pause: this.state.guestCanPause
             }),
         };
-        fetch('/api/join-room', requestOptions)
+        fetch('/api/create-room', requestOptions)
             .then((response) => response.json())
             .then((data) => this.props.history.push('/room/' + data.code));
     }
